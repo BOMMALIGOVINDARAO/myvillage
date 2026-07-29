@@ -35,7 +35,7 @@
     <meta name="twitter:title" content="Chennayyavalasa Village | Official Website">
     <meta name="twitter:description" content="Discover Chennayyavalasa Village in Srikakulam District, Andhra Pradesh – its heritage, agriculture, temples, festivals, and natural beauty.">
     <meta name="twitter:image" content="https://bommaligovindarao.github.io/myvillage/assets/images/og-image.webp">
-    
+
     <script type="application/ld+json">
         {
            "@context":"https://schema.org",
@@ -56,16 +56,23 @@
     <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/logos/favicon_web.webp">
 
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript> <link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="preload" href="assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript> <link rel="stylesheet" href="assets/css/all.min.css"></noscript>
+
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <link rel="preload" href="assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript> <link rel="stylesheet" href="assets/css/custom.css"></noscript>
 </head>
 <body>
 
@@ -74,7 +81,7 @@
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
                 <!-- Logo 2 Image -->
-                <img src="assets/images/logos/Chennayyavalasa_logo.webp" width="40" height="40" loading="lazy"  alt="Chennayyavalasa Village Logo"> 
+                <img src="assets/images/logos/Chennayyavalasa_logo.webp" width="40" height="40" loading="lazy"  alt="Chennayyavalasa Village Logo">
                 Chennayyavalasa
             </a>
             <button  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,27 +103,32 @@
     <!-- Home Page Scrolling Images (Carousel) -->
     <header id="home" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#home" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#home" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active"
+                 aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2">
+            </button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/images/banners/banner6.webp" loading="eager" class="d-block w-100" alt="Village Sunrise">
+                <img src="assets/images/banners/banner6.webp"  class="d-block w-100" alt="Village Sunrise"
+                fetchpriority="high" loading="eager" decoding="async" width="1600" height="700">
                 <div class="carousel-caption d-none d-md-block fade-up visible">
                     <h1>Welcome to Chennayyavalasa</h1>
                     <p>A thriving, green agricultural village in Srikakulam District.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/images/banners/banner2.webp" loading="eager" class="d-block w-100" alt="Village Nature">
+                <img src="assets/images/banners/banner2.webp" fetchpriority="high" loading="eager" decoding="async" width="1600"
+                 height="700" class="d-block w-100" alt="Village Nature">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Rich Traditions</h1>
                     <p>Rooted in rich tradition and modern harmony.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/images/banners/banner9.webp" loading="eager" class="d-block w-100" alt="Agriculture">
+                <img src="assets/images/banners/banner9.webp" fetchpriority="high" loading="eager" decoding="async" width="1600" height="700"
+                 class="d-block w-100" alt="Agriculture">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Agricultural Heritage</h1>
                     <p>Sustaining our community through bountiful harvests.</p>
@@ -143,18 +155,22 @@
                     <p class="about-text">Surrounded by lush greenery and the <strong>Vamsadhara Left Sub Canal</strong>, Chennayyavalasa is at its most scenic during the monsoon and winter seasons, when vast paddy fields transform the landscape into a breathtaking sight. The picturesque <strong>Chennayyavalasa Hill</strong>, located on the western side of the village, enhances its natural beauty, while the Vamsadhara Left Main Canal serves as a vital source of irrigation, supporting agriculture throughout the year.</p>
                 </div>
                 <div class="col-lg-6 fade-up">
-                    <img src="assets/images/about/about.webp" width="800" height="533" loading="lazy" alt="About Chennayyavalasa Village" class="about-image">
+                    <img src="assets/images/about/about.webp" width="800" height="533"
+                    loading="lazy" alt="About Chennayyavalasa Village" class="about-image"
+                    srcset="assets/images/about/about-360.webp 360w,assets/images/about/about-600.webp 600w,
+                    assets/images/about/about.webp 800w"
+                    sizes="(max-width:768px) 100vw, 50vw">
                 </div>
                 <div class="col-lg-6 fade-up" style="transition-delay: 0.2s;">
-                   
-                   
+
+
 
                     <p class="about-text">Agriculture and fishing are the primary occupations of the villagers, forming the backbone of the local economy. The village's fertile land, abundant water resources, and strong agricultural traditions have enabled generations of families to build sustainable livelihoods while preserving its rich cultural heritage and close-knit community spirit.</p>
 
                     <p class="about-text">According to the <strong>2011 Census</strong>, Chennayyavalasa has a population of <strong>989</strong> residents living in <strong>261 households</strong>. The village is well known for its peaceful environment, warm hospitality, and harmonious way of life, making it an excellent example of rural Andhra Pradesh.</p>
 
                     <p class="about-text">Chennayyavalasa proudly embodies the values of <strong>Unity, Prosperity, and Heritage</strong>. By blending natural beauty, traditional agriculture, and a strong sense of community, the village offers a vibrant, welcoming, and sustainable environment for both residents and visitors alike.</p>
-                    
+
                     <!-- <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="info-card">
@@ -204,7 +220,7 @@
                         <img src="assets/images/occupation/fishing.webp" loading="lazy" class="card-img-top" alt="Chennayyavalasa Fishing">
                         <div class="card-body p-4">
                             <h4 class="card-title text-success fw-bold"><i class="fas fa-fish me-2" aria-hidden="true"></i> Fishing</h4>
-                            <p class="card-text text-muted">Fishing is the primary occupation for the majority of the village, specifically the Neyyala community, 
+                            <p class="card-text text-muted">Fishing is the primary occupation for the majority of the village, specifically the Neyyala community,
                                 who make up 60% of the population.
                                 They embark on daily fishing expeditions, a traditional practice locally known as 'Veta'.</p>
                             <ul class="list-unstyled mt-3 mb-0">
@@ -333,7 +349,7 @@
     <section id="panchayat" class="section-padding">
         <div class="container">
             <h2 class="section-title fade-up">Panchayat Administration</h2>
-            
+
             <!-- Panchayat Info Banner -->
             <div class="panchayat-banner fade-up">
                 <div class="row align-items-center">
@@ -479,7 +495,9 @@
                 <div class="col-lg-7 fade-up" style="transition-delay: 0.2s;">
                     <div class="map-container">
                         <!-- Placeholder iframe for Google Maps based on visual structure -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3128.185471019885!2d84.00674507418643!3d18.511707269446934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c4350a27f3981%3A0xc74f9c43172080c3!2sChennayyavalasa!5e1!3m2!1sen!2sin!4v1785249610629!5m2!1sen!2sin" referrerpolicy="no-referrer-when-downgrade"  width="100%" height="100%" style="border:0; min-height: 500px;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3128.185471019885!2d84.00674507418643!3d18.511707269446934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c4350a27f3981%3A0xc74f9c43172080c3!2sChennayyavalasa!5e1!3m2!1sen!2sin!4v1785249610629!5m2!1sen!2sin"
+                         referrerpolicy="no-referrer-when-downgrade"  width="100%" height="100%" style="border:0;
+                         min-height: 500px;" allowfullscreen="" loading="lazy" title="Location of Chennayyavalasa Village on Google Maps"></iframe>
                     </div>
                 </div>
             </div>
@@ -491,9 +509,10 @@
         <div class="container">
             <div class="row g-4 align-items-center mb-5">
                 <div class="col-md-7">
-                   
+
                     <h4 class="footer-title mb-3 text-white fw-bold d-flex align-items-center gap-2">
-                        <img src="assets/images/logos/Chennayyavalasa_logo.webp" loading="lazy" alt="Chennayyavalasa Logo" style="height: 32px; width: auto;">
+                        <img src="assets/images/logos/Chennayyavalasa_logo.webp" loading="lazy" alt="Chennayyavalasa Logo"
+                        width="40" height="40">
                        <span>Chennayyavalasa</span>
                     </h4>
                     <p class="mb-0 text-white-50" style="max-width: 500px;">Blessed by nature and rich in tradition, Chennayyavalasa is a peaceful haven of green fields,
@@ -518,35 +537,48 @@
     </footer>
 
     <!-- jQuery & Bootstrap JS -->
-    <script src="assets/js/jquery-3.7.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    
+    <!-- <script src="assets/js/jquery-3.7.0.min.js"></script> -->
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+
     <!-- Custom Animation Script -->
     <script>
-        $(document).ready(function() {
-            document.getElementById("year").textContent =
-            new Date().getFullYear();
-            // Trigger animation on load for elements already in view
-            checkAnimation();
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements=document.querySelectorAll(".fade-up");
+        function checkAnimation(){
+          const windowBottom=window.scrollY+window.innerHeight;
+            elements.forEach(el=>{
+              if(windowBottom>el.offsetTop+80){
+                   el.classList.add("visible");
+              }
+            });
+        }
+        checkAnimation();
+        window.addEventListener("scroll",checkAnimation);
+      });
+        // $(document).ready(function() {
+        //     document.getElementById("year").textContent =
+        //     new Date().getFullYear();
+        //     // Trigger animation on load for elements already in view
+        //     checkAnimation();
 
-            // Trigger animation on scroll
-            $(window).on("scroll", checkAnimation);
-            // $(window).scroll(function() {
-            //     checkAnimation();
-            // });
+        //     // Trigger animation on scroll
+        //     $(window).on("scroll", checkAnimation);
+        //     // $(window).scroll(function() {
+        //     //     checkAnimation();
+        //     // });
 
-            function checkAnimation() {
-                $('.fade-up').each(function() {
-                    var elementTop = $(this).offset().top;
-                    var windowBottom = $(window).scrollTop() + $(window).height();
-                    
-                    // Add 'visible' class when the element scrolls into view
-                    if (windowBottom > elementTop + 80) {
-                        $(this).addClass('visible');
-                    }
-                });
-            }
-        });
+        //     function checkAnimation() {
+        //         $('.fade-up').each(function() {
+        //             var elementTop = $(this).offset().top;
+        //             var windowBottom = $(window).scrollTop() + $(window).height();
+
+        //             // Add 'visible' class when the element scrolls into view
+        //             if (windowBottom > elementTop + 80) {
+        //                 $(this).addClass('visible');
+        //             }
+        //         });
+        //     }
+        // });
     </script>
 </body>
 </html>
