@@ -1,0 +1,21 @@
+{
+  "name": "Chennayyavalasa Village",
+  "short_name": "Chennayyavalasa",
+  "start_url": "/myvillage/",
+  "scope": "/myvillage/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2e7d32",
+  "icons": [
+    {
+      "src": "assets/images/logos/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logos/favicon_web.webp",
+      "sizes": "32x32",
+      "type": "image/webp"
+    }
+  ]
+}
