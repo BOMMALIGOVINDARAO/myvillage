@@ -55,10 +55,7 @@
     <link rel="icon" href="assets/images/logos/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/logos/favicon_web.webp">
 
-    <!-- Bootstrap -->
 
-    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript> <link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
 
     <!-- Font Awesome -->
     <link rel="preload" href="assets/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -66,8 +63,14 @@
 
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap"
+     rel="stylesheet">
+     <!-- Bootstrap -->
+
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript> <link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
 
     <!-- Custom CSS -->
 
@@ -75,13 +78,13 @@
     <noscript> <link rel="stylesheet" href="assets/css/custom.css"></noscript>
 </head>
 <body>
-
-    <!-- Navigation -->
+  <header>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
                 <!-- Logo 2 Image -->
-                <img src="assets/images/logos/Chennayyavalasa_logo.webp" width="40" height="40" loading="lazy"  alt="Chennayyavalasa Village Logo">
+                <img src="assets/images/logos/Chennayyavalasa_logo.webp" width="40" height="40" loading="lazy"
+                 alt="Chennayyavalasa Village Logo" decoding="async">
                 Chennayyavalasa
             </a>
             <button  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,9 +102,10 @@
             </div>
         </div>
     </nav>
+  </header>
   <main>
     <!-- Home Page Scrolling Images (Carousel) -->
-    <header id="home" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <section id="home" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active"
                  aria-current="true" aria-label="Slide 1"></button>
@@ -111,15 +115,15 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/images/banners/banner6.webp"  class="d-block w-100" alt="Village Sunrise"
-                fetchpriority="high" loading="eager" decoding="async" width="1600" height="700">
+                <img src="assets/images/banners/banner6.webp" class="d-block w-100" alt="Village Entrance"
+                width="1600" height="700" fetchpriority="high" loading="eager" decoding="async">
                 <div class="carousel-caption d-none d-md-block fade-up visible">
                     <h1>Welcome to Chennayyavalasa</h1>
                     <p>A thriving, green agricultural village in Srikakulam District.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/images/banners/banner2.webp" fetchpriority="high" loading="eager" decoding="async" width="1600"
+                <img src="assets/images/banners/banner2.webp" loading="lazy" fetchpriority="low" decoding="async" width="1600"
                  height="700" class="d-block w-100" alt="Village Nature">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Rich Traditions</h1>
@@ -127,7 +131,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/images/banners/banner9.webp" fetchpriority="high" loading="eager" decoding="async" width="1600" height="700"
+                <img src="assets/images/banners/banner9.webp" loading="lazy" fetchpriority="low" decoding="async" width="1600" height="700"
                  class="d-block w-100" alt="Agriculture">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Agricultural Heritage</h1>
@@ -143,7 +147,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </header>
+      </section>
 
     <!-- About Village Section -->
     <section id="about" class="section-padding">
@@ -155,7 +159,7 @@
                     <p class="about-text">Surrounded by lush greenery and the <strong>Vamsadhara Left Sub Canal</strong>, Chennayyavalasa is at its most scenic during the monsoon and winter seasons, when vast paddy fields transform the landscape into a breathtaking sight. The picturesque <strong>Chennayyavalasa Hill</strong>, located on the western side of the village, enhances its natural beauty, while the Vamsadhara Left Main Canal serves as a vital source of irrigation, supporting agriculture throughout the year.</p>
                 </div>
                 <div class="col-lg-6 fade-up">
-                    <img src="assets/images/about/about2.webp" width="800" height="533"
+                    <img src="assets/images/about/about2.webp" width="800" height="533" decoding="async"
                     loading="lazy" alt="About Chennayyavalasa Village" class="about-image"
                    >
                 </div>
@@ -183,9 +187,11 @@
                 <!-- Farming -->
                 <div class="col-lg-4 col-md-6 fade-up">
                     <div class="card">
-                        <img src="assets/images/occupation/farming.webp" loading="lazy" class="card-img-top" alt="Chennayyavalasa Farming">
+                        <img src="assets/images/occupation/farming.webp" loading="lazy" class="card-img-top"
+                        alt="Chennayyavalasa Farming" decoding="async">
                         <div class="card-body p-4">
-                            <h4 class="card-title text-success fw-bold"><i class="fas fa-tractor me-2" aria-hidden="true"></i> Farming</h4>
+                            <h3 class="card-title text-success fw-bold"><i class="fas fa-tractor me-2"
+                               aria-hidden="true"></i> Farming</h3>
                             <p class="card-text text-muted">The backbone of our village. We cultivate a variety of crops to sustain our community and economy.</p>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2"><i class="fas fa-leaf text-success me-2" aria-hidden="true"></i> Groundnut & Rice</li>
@@ -199,9 +205,11 @@
                 <!-- Fishing -->
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.2s;">
                     <div class="card">
-                        <img src="assets/images/occupation/fishing.webp" loading="lazy" class="card-img-top" alt="Chennayyavalasa Fishing">
+                        <img src="assets/images/occupation/fishing.webp" loading="lazy" class="card-img-top"
+                        alt="Chennayyavalasa Fishing" decoding="async">
                         <div class="card-body p-4">
-                            <h4 class="card-title text-success fw-bold"><i class="fas fa-fish me-2" aria-hidden="true"></i> Fishing</h4>
+                            <h3 class="card-title text-success fw-bold"><i class="fas fa-fish me-2"
+                              aria-hidden="true"></i> Fishing</h3>
                             <p class="card-text text-muted">Fishing is the primary occupation for the majority of the village, specifically the Neyyala community,
                                 who make up 60% of the population.
                                 They embark on daily fishing expeditions, a traditional practice locally known as 'Veta'.</p>
@@ -215,9 +223,11 @@
                 <!-- Orchard -->
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.4s;">
                     <div class="card">
-                        <img src="assets/images/occupation/cashew-mango-trees.webp" loading="lazy" class="card-img-top" alt="Chennayyavalasa Horticulture & Orchards">
+                        <img src="assets/images/occupation/cashew-mango-trees.webp" loading="lazy"
+                        class="card-img-top" alt="Chennayyavalasa Horticulture & Orchards" decoding="async">
                         <div class="card-body p-4">
-                            <h4 class="card-title text-success fw-bold"><i class="fas fa-tree me-2" aria-hidden="true"></i> Horticulture & Orchards</h4>
+                            <h3 class="card-title text-success fw-bold"><i class="fas fa-tree me-2"
+                              aria-hidden="true"></i> Horticulture & Orchards</h3>
                             <p class="card-text text-muted">During the summer season, many families rely on the cultivation of mangoes and cashews grown in the hilly metta
                                 lands on the western side of the village.</p>
                             <ul class="list-unstyled mt-3 mb-0">
@@ -239,54 +249,54 @@
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up">
                     <div class="icon-box">
                         <i class="fas fa-book-reader" aria-hidden="true"></i>
-                        <h5 class="fw-bold mt-3">Grandhalayam</h5>
+                        <h4 class="fw-bold mt-3">Grandhalayam</h4>
                         <p class="small text-muted mb-0">(Library)</p>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up" style="transition-delay: 0.1s;">
                     <div class="icon-box">
                         <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
-                        <h5 class="fw-bold mt-3">Post Office</h5>
+                        <h4 class="fw-bold mt-3">Post Office</h4>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up" style="transition-delay: 0.2s;">
                     <div class="icon-box">
                         <i class="fas fa-building" aria-hidden="true"></i>
-                        <h5 class="fw-bold mt-3">Grama Panchayat</h5>
+                        <h4 class="fw-bold mt-3">Grama Panchayat</h4>
                         <p class="small text-muted mb-0">Office</p>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up" style="transition-delay: 0.3s;">
                     <div class="icon-box">
                         <i class="fas fa-users" aria-hidden="true"></i>
-                        <h5 class="fw-bold mt-3">Grama Sangam</h5>
+                        <h4 class="fw-bold mt-3">Grama Sangam</h4>
                         <!-- <p class="small text-muted mb-0">(Women Podupu)</p> -->
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up" style="transition-delay: 0.4s;">
                     <div class="icon-box">
                         <i class="fas fa-school" aria-hidden="true"></i>
-                        <h5 class="fw-bold mt-3">Elementary Education</h5>
+                        <h4 class="fw-bold mt-3">Elementary Education</h4>
                     </div>
                 </div>
                 <!-- New Items Added Below -->
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up" style="transition-delay: 0.5s;">
                 <div class="icon-box">
                     <i class="fas fa-child-reaching" aria-hidden="true"></i>
-                    <h5 class="fw-bold mt-3">Anganwadi</h5>
+                    <h4 class="fw-bold mt-3">Anganwadi</h4>
                     <p class="small text-muted mb-0">Center</p>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up" style="transition-delay: 0.6s;">
                 <div class="icon-box">
                     <i class="fas fa-store" aria-hidden="true"></i>
-                    <h5 class="fw-bold mt-3">Ration Depot</h5>
+                    <h4 class="fw-bold mt-3">Ration Depot</h4>
                 </div>
             </div>
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 fade-up" style="transition-delay: 0.7s;">
                 <div class="icon-box">
                     <i class="fas fa-fish" aria-hidden="true"></i>
-                    <h5 class="fw-bold mt-3">Matsyakara</h5>
+                    <h4 class="fw-bold mt-3">Matsyakara</h4>
                     <p class="small text-muted mb-0">Society</p>
                 </div>
             </div>
@@ -301,26 +311,30 @@
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-md-6 fade-up">
                     <div class="card text-center pb-3 border-0 shadow-sm">
-                        <img src="assets/images/worships/asirithalli-ammavaru.webp" loading="lazy" class="card-img-top mb-3" alt="Chennayyavalasa Asirithalli Ammavaru">
-                        <h5 class="fw-bold text-dark px-2">Asirithalli Ammavaru</h5>
+                        <img src="assets/images/worships/asirithalli-ammavaru.webp" loading="lazy"
+                         class="card-img-top mb-3" alt="Chennayyavalasa Asirithalli Ammavaru" decoding="async">
+                        <h4 class="fw-bold text-dark px-2">Asirithalli Ammavaru</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.1s;">
                     <div class="card text-center pb-3 border-0 shadow-sm">
-                        <img src="assets/images/worships/nukalamma-thalli.webp" loading="lazy" class="card-img-top mb-3" alt="Chennayyavalasa Pathapatnam Thalli">
-                        <h5 class="fw-bold text-dark px-2">Pathapatnam Thalli</h5>
+                        <img src="assets/images/worships/nukalamma-thalli.webp" loading="lazy"
+                        class="card-img-top mb-3" alt="Chennayyavalasa Pathapatnam Thalli" decoding="async">
+                        <h4 class="fw-bold text-dark px-2">Pathapatnam Thalli</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.2s;">
                     <div class="card text-center pb-3 border-0 shadow-sm">
-                        <img src="assets/images/worships/ramamandiram.webp" loading="lazy" class="card-img-top mb-3" alt="Chennayyavalasa Srirama Mandiram">
-                        <h5 class="fw-bold text-dark px-2">Srirama Mandiram</h5>
+                        <img src="assets/images/worships/ramamandiram.webp" loading="lazy" class="card-img-top mb-3"
+                         alt="Chennayyavalasa Srirama Mandiram" decoding="async">
+                        <h4 class="fw-bold text-dark px-2">Srirama Mandiram</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-up" style="transition-delay: 0.3s;">
                     <div class="card text-center pb-3 border-0 shadow-sm">
-                        <img src="assets/images/worships/church.webp" loading="lazy" class="card-img-top mb-3" alt="Chennayyavalasa Church">
-                        <h5 class="fw-bold text-dark px-2">Church</h5>
+                        <img src="assets/images/worships/church.webp" loading="lazy" class="card-img-top mb-3"
+                         alt="Chennayyavalasa Church" decoding="async">
+                        <h4 class="fw-bold text-dark px-2">Church</h4>
                     </div>
                 </div>
             </div>
@@ -399,38 +413,45 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 fade-up">
                     <div class="gallery-item">
-                        <img src="assets/images/glimps/grama_panchayat_office.webp" loading="lazy" alt="Chennayyavalasa Panchayat office" class="gallery-img">
+                        <img src="assets/images/glimps/grama_panchayat_office.webp" loading="lazy"
+                        alt="Chennayyavalasa Panchayat office" class="gallery-img" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.1s;">
                     <div class="gallery-item">
-                        <img src="assets/images/glimps/hill.webp" loading="lazy"  alt="Chennayyavalasa Hill" class="gallery-img">
+                        <img src="assets/images/glimps/hill.webp" loading="lazy"  alt="Chennayyavalasa Hill"
+                        class="gallery-img" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.2s;">
                     <div class="gallery-item">
-                        <img src="assets/images/glimps/snow.webp" loading="lazy" alt="Chennayyavalasa Winter season" class="gallery-img">
+                        <img src="assets/images/glimps/snow.webp" loading="lazy" alt="Chennayyavalasa Winter season"
+                         class="gallery-img" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.3s;">
                     <div class="gallery-item">
-                        <img src="assets/images/glimps/youth.webp" loading="lazy" alt="Chennayyavalasa Village Youth" class="gallery-img">
+                        <img src="assets/images/glimps/youth.webp" loading="lazy" alt="Chennayyavalasa Village Youth"
+                         class="gallery-img" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.4s;">
                     <div class="gallery-item">
-                        <img src="assets/images/glimps/school.webp" loading="lazy" alt="Chennayyavalasa School" class="gallery-img">
+                        <img src="assets/images/glimps/school.webp" loading="lazy" alt="Chennayyavalasa School"
+                        class="gallery-img" decoding="async">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.5s;">
                     <div class="gallery-item">
-                        <img src="assets/images/glimps/rama_mandiram.webp" loading="lazy" alt="Chennayyavalasa Rama Mandiram" class="gallery-img">
+                        <img src="assets/images/glimps/rama_mandiram.webp" loading="lazy"
+                         alt="Chennayyavalasa Rama Mandiram" class="gallery-img" decoding="async">
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.3s;">
                     <div class="gallery-item">
-                        <img src="assets/images/glimps/agriculture.webp" loading="lazy" alt="Chennayyavalasa Agriculture Life" class="gallery-img">
+                        <img src="assets/images/glimps/agriculture.webp" loading="lazy"
+                        alt="Chennayyavalasa Agriculture Life" class="gallery-img" decoding="async">
                     </div>
                 </div>
                 <!-- <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.4s;">
@@ -494,7 +515,7 @@
 
                     <h4 class="footer-title mb-3 text-white fw-bold d-flex align-items-center gap-2">
                         <img src="assets/images/logos/Chennayyavalasa_logo.webp" loading="lazy" alt="Chennayyavalasa Logo"
-                        width="40" height="40">
+                        width="40" height="40" decoding="async">
                        <span>Chennayyavalasa</span>
                     </h4>
                     <p class="mb-0 text-light" style="max-width: 500px;">Blessed by nature and rich in tradition, Chennayyavalasa is a peaceful haven of green fields,
