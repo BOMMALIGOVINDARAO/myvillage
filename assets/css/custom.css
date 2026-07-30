@@ -391,13 +391,7 @@ h1,h2,h3,h4,h5,h6,.navbar-brand{
     --bs-gutter-y:12px;
 }
 
-/* #gallery .col-md-6,
-#gallery .col-lg-4{
 
-    width:50%;
-    flex:0 0 auto;
-
-} */
 
 .gallery-item{
 
@@ -411,4 +405,5 @@ h1,h2,h3,h4,h5,h6,.navbar-brand{
     object-fit:cover;
 
 }
+
 }
