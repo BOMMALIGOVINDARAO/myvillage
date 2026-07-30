@@ -67,15 +67,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap"
      rel="stylesheet">
-     <!-- Bootstrap -->
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript> <link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
-
-    <!-- Custom CSS -->
-
-    <link rel="preload" href="assets/css/custom.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript> <link rel="stylesheet" href="assets/css/custom.css"></noscript>
+     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
   <header>
@@ -159,7 +153,7 @@
                     <p class="about-text">Surrounded by lush greenery and the <strong>Vamsadhara Left Sub Canal</strong>, Chennayyavalasa is at its most scenic during the monsoon and winter seasons, when vast paddy fields transform the landscape into a breathtaking sight. The picturesque <strong>Chennayyavalasa Hill</strong>, located on the western side of the village, enhances its natural beauty, while the Vamsadhara Left Main Canal serves as a vital source of irrigation, supporting agriculture throughout the year.</p>
                 </div>
                 <div class="col-lg-6 fade-up">
-                    <img src="assets/images/about/about2.webp" width="800" height="533" decoding="async"
+                    <img src="assets/images/about/about.webp" width="534" height="356" decoding="async"
                     loading="lazy" alt="About Chennayyavalasa Village" class="about-image"
                    >
                 </div>
@@ -187,7 +181,8 @@
                 <!-- Farming -->
                 <div class="col-lg-4 col-md-6 fade-up">
                     <div class="card">
-                        <img src="assets/images/occupation/farming.webp" loading="lazy" class="card-img-top"
+                        <img src="assets/images/occupation/farming.webp" loading="lazy" width="360" height="240"
+                        class="card-img-top"
                         alt="Chennayyavalasa Farming" decoding="async">
                         <div class="card-body p-4">
                             <h3 class="card-title text-success fw-bold"><i class="fas fa-tractor me-2"
@@ -205,7 +200,9 @@
                 <!-- Fishing -->
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.2s;">
                     <div class="card">
-                        <img src="assets/images/occupation/fishing.webp" loading="lazy" class="card-img-top"
+                        <img src="assets/images/occupation/fishing.webp" loading="lazy"
+                        width="360" height="240"
+                        class="card-img-top"
                         alt="Chennayyavalasa Fishing" decoding="async">
                         <div class="card-body p-4">
                             <h3 class="card-title text-success fw-bold"><i class="fas fa-fish me-2"
@@ -224,6 +221,7 @@
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.4s;">
                     <div class="card">
                         <img src="assets/images/occupation/cashew-mango-trees.webp" loading="lazy"
+                        width="360" height="240"
                         class="card-img-top" alt="Chennayyavalasa Horticulture & Orchards" decoding="async">
                         <div class="card-body p-4">
                             <h3 class="card-title text-success fw-bold"><i class="fas fa-tree me-2"
@@ -462,7 +460,7 @@
                 <div class="col-lg-4 col-md-6 fade-up" style="transition-delay: 0.5s;">
                     <div class="gallery-item">
                         <img src="assets/images/glimps/rama_mandiram.webp" loading="lazy" alt="Rama Mandiram" class="gallery-img">
-                    </div>
+                    </div>git
                 </div> -->
             </div>
         </div>
@@ -545,43 +543,36 @@
 
     <!-- Custom Animation Script -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const elements=document.querySelectorAll(".fade-up");
-        function checkAnimation(){
-          const windowBottom=window.scrollY+window.innerHeight;
-            elements.forEach(el=>{
-              if(windowBottom>el.offsetTop+80){
-                   el.classList.add("visible");
-              }
-            });
-        }
-        checkAnimation();
-        window.addEventListener("scroll",checkAnimation);
-      });
-        // $(document).ready(function() {
-        //     document.getElementById("year").textContent =
-        //     new Date().getFullYear();
-        //     // Trigger animation on load for elements already in view
-        //     checkAnimation();
+      document.addEventListener("DOMContentLoaded", () => {
 
-        //     // Trigger animation on scroll
-        //     $(window).on("scroll", checkAnimation);
-        //     // $(window).scroll(function() {
-        //     //     checkAnimation();
-        //     // });
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
 
-        //     function checkAnimation() {
-        //         $('.fade-up').each(function() {
-        //             var elementTop = $(this).offset().top;
-        //             var windowBottom = $(window).scrollTop() + $(window).height();
+    const observer = new IntersectionObserver((entries)=>{
 
-        //             // Add 'visible' class when the element scrolls into view
-        //             if (windowBottom > elementTop + 80) {
-        //                 $(this).addClass('visible');
-        //             }
-        //         });
-        //     }
-        // });
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },{
+        threshold:0.15
+    });
+
+    document.querySelectorAll(".fade-up").forEach(el=>{
+
+        observer.observe(el);
+
+    });
+
+});
     </script>
 </body>
 </html>
